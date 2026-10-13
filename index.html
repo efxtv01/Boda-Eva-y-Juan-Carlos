@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Nuestra Boda | Eva y Juan Carlos</title>
+  
+  <!-- Metadatos Open Graph para compartir en WhatsApp, Facebook y Redes -->
+  <meta property="og:title" content="Nuestra Boda - Eva y Juan Carlos">
+  <meta property="og:description" content="Queremos invitarle a compartir el día de nuestra boda. Sábado 28 de noviembre.">
+  <meta property="og:image" content="./assets/images/wax_seal.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="./assets/images/wax_seal.png">
+
+  <!-- Google Fonts Elegantes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome para Iconos de Botones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Audio de Fondo (Canción: Contigo Siempre, de Pablo Alborán) -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="./assets/audio/cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <!-- ==========================================================
+       PANTALLA DE APERTURA / SOBRE CON SELLO DE LACRE INTERACTIVO
+       ========================================================== -->
+  <div id="envelope-screen" class="envelope-screen">
+    <div class="envelope-container">
+      <div class="envelope-monogram">Nuestra Boda</div>
+      <h1 class="envelope-title">Eva &amp; Juan Carlos</h1>
+      
+      <div id="wax-seal-wrapper" class="wax-seal-wrapper" title="Toca para abrir la invitación">
+        <div class="pulse-ring"></div>
+        <img src="./assets/images/wax_seal.png" alt="Sello de Lacre E & J" class="wax-seal-img">
+      </div>
+
+      <button id="btn-open-envelope" class="btn-open-envelope">
+        <i class="fa-solid fa-envelope-open-text"></i> Abrir Invitación
+      </button>
+
+      <p class="envelope-hint">Toca el sello o el botón para ingresar</p>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       CONTENEDOR PRINCIPAL MÓVIL (MOBILE WRAPPER)
+       ========================================================== -->
+  <div class="mobile-wrapper">
+
+    <!-- Canvas de Pétalos de Rosa Flotantes -->
+    <canvas id="petals-canvas"></canvas>
+
+    <!-- Reproductor de Música Flotante -->
+    <div id="music-control-floating" class="music-control-floating" title="Reproducir / Pausar Música">
+      <div class="music-disc-icon">
+        <i class="fa-solid fa-music"></i>
+      </div>
+      <div class="music-info">
+        <span class="music-title">Contigo Siempre</span>
+        <span class="music-artist">Pablo Alborán</span>
+      </div>
+      <div class="sound-wave">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         PORTADA / HERO SECTION
+         ========================================================== -->
+    <header class="hero-section">
+      <div class="hero-cover-wrapper">
+        <img src="./assets/images/portada_floral_dorada.png" alt="Nuestra Boda - Eva &amp; Juan C." class="hero-cover-img">
+      </div>
+    </header>
+
+    <!-- Divisor Floral -->
+    <div class="floral-divider-container">
+      <img src="./assets/images/floral_divider.png" alt="Decoración Floral" class="floral-divider-img">
+    </div>
+
+    <!-- ==========================================================
+         SECCIÓN 1: BENDICIÓN DE DIOS Y PADRES
+         ========================================================== -->
+    <section class="parents-section">
+      <span class="section-label">Con Amor y Gratitud</span>
+      <h3 class="section-title">Con la Bendición de Dios<br>y de Nuestros Padres</h3>
+      <p class="parents-intro">Tienen el honor de invitarle al enlace matrimonial de sus hijos:</p>
+
+      <div class="parents-grid">
+        <!-- Padres de la Novia -->
+        <div class="parent-group">
+          <span class="parent-role">Padres de la Novia</span>
+          <p class="parent-name">Carlos Vidal Loarca Carrera <span class="cross-symbol">✝</span></p>
+          <p class="parent-name">María Elvira Ramos</p>
+        </div>
+
+        <!-- Padres del Novio -->
+        <div class="parent-group">
+          <span class="parent-role">Padres del Novio</span>
+          <p class="parent-name">Irma Yolanda García de Izaguirre</p>
+          <p class="parent-name">César Augusto Izaguirre Flores</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor Floral -->
+    <div class="floral-divider-container">
+      <img src="./assets/images/floral_divider.png" alt="Decoración Floral" class="floral-divider-img">
+    </div>
+
+    <!-- ==========================================================
+         FECHA & CONTADOR REGRESIVO
+         ========================================================== -->
+    <section class="date-countdown-section">
+      <div class="event-gif-icon-wrapper" style="margin: 0 auto 16px;">
+        <img src="./assets/gifs/FECHA.gif" alt="Fecha de Nuestra Boda" class="event-gif-icon">
+      </div>
+      <p class="invitation-invitation-text">
+        Queremos invitarle a compartir el día de nuestra boda
+      </p>
+
+      <div class="date-feature-box">
+        <div class="date-day-name">Sábado</div>
+        <div class="date-calendar-number">28</div>
+        <div class="date-month-year">Noviembre · 2026</div>
+        <div class="date-time-badge">
+          <i class="fa-regular fa-clock"></i> 17:00 Horas
+        </div>
+      </div>
+
+      <div class="countdown-wrapper">
+        <div class="countdown-title">Esperando este Gran Día</div>
+        <div class="countdown-grid">
+          <div class="countdown-item">
+            <span id="countdown-days" class="countdown-number">00</span>
+            <span class="countdown-label">Días</span>
+          </div>
+          <div class="countdown-item">
+            <span id="countdown-hours" class="countdown-number">00</span>
+            <span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span id="countdown-minutes" class="countdown-number">00</span>
+            <span class="countdown-label">Min</span>
+          </div>
+          <div class="countdown-item">
+            <span id="countdown-seconds" class="countdown-number">00</span>
+            <span class="countdown-label">Seg</span>
+          </div>
+        </div>
+
+        <a href="#" id="btn-add-calendar" class="btn-calendar">
+          <i class="fa-regular fa-calendar-plus"></i> Agendar en mi Calendario
+        </a>
+      </div>
+    </section>
+
+    <!-- Divisor Floral -->
+    <div class="floral-divider-container">
+      <img src="./assets/images/floral_divider.png" alt="Decoración Floral" class="floral-divider-img">
+    </div>
+
+    <!-- ==========================================================
+         CEREMONIA & RECEPCIÓN
+         ========================================================== -->
+    <section class="events-section">
+
+      <!-- Ceremonia Religiosa -->
+      <div class="event-card">
+        <div class="event-gif-icon-wrapper">
+          <img src="./assets/gifs/IGLESIA.gif" alt="Ceremonia Religiosa" class="event-gif-icon">
+        </div>
+        <h3 class="event-title">Ceremonia Religiosa</h3>
+        <div class="event-time"><i class="fa-regular fa-clock"></i> 17:00 Horas</div>
+        <div class="event-place-name">Iglesia San Lucas Evangelista</div>
+        <p class="event-place-address">
+          San Lucas Sacatepéquez
+        </p>
+
+        <div class="event-buttons-row">
+          <a href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Lucas+Evangelista%2C+San+Lucas+Sacatep%C3%A9quez" target="_blank" rel="noopener noreferrer" class="btn-map-gmaps">
+            <i class="fa-solid fa-map-location-dot"></i> Ver en Google Maps
+          </a>
+          <a href="https://waze.com/ul?q=Iglesia+San+Lucas+Evangelista%2C+San+Lucas+Sacatep%C3%A9quez&navigate=yes" target="_blank" rel="noopener noreferrer" class="btn-map-waze">
+            <i class="fa-brands fa-waze"></i> Abrir en Waze
+          </a>
+        </div>
+      </div>
+
+      <!-- Recepción -->
+      <div class="event-card">
+        <div class="event-gif-icon-wrapper">
+          <img src="./assets/gifs/RECEPCION.gif" alt="Recepción" class="event-gif-icon">
+        </div>
+        <h3 class="event-title">Recepción</h3>
+        <div class="event-time"><i class="fa-regular fa-clock"></i> 18:30 Horas</div>
+        <div class="event-place-name">Casa Toribia</div>
+        <p class="event-place-address">
+          San Lucas Sacatepéquez<br>
+          <strong>4ta. Avenida Norte Lote 26</strong>
+        </p>
+
+        <div class="event-buttons-row">
+          <a href="https://www.google.com/maps/search/?api=1&query=Casa+Toribia%2C+San+Lucas+Sacatep%C3%A9quez" target="_blank" rel="noopener noreferrer" class="btn-map-gmaps">
+            <i class="fa-solid fa-map-location-dot"></i> Ver en Google Maps
+          </a>
+          <a href="https://waze.com/ul?q=Casa+Toribia+4ta+Avenida+Norte+Lote+26+San+Lucas+Sacatep%C3%A9quez&navigate=yes" target="_blank" rel="noopener noreferrer" class="btn-map-waze">
+            <i class="fa-brands fa-waze"></i> Abrir en Waze
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Divisor Floral -->
+    <div class="floral-divider-container">
+      <img src="./assets/images/floral_divider.png" alt="Decoración Floral" class="floral-divider-img">
+    </div>
+
+    <!-- ==========================================================
+         CÓDIGO DE VESTIMENTA (DRESS CODE)
+         ========================================================== -->
+    <section class="dress-code-section">
+      <div class="dress-card">
+        <div class="dress-icons-row" style="display: flex; justify-content: center; align-items: center; gap: 14px; margin-bottom: 16px;">
+          <div class="event-gif-icon-wrapper" style="margin: 0;">
+            <img src="./assets/gifs/CODIGO%20VESTIMENTA1.gif" alt="Vestimenta Damas" class="event-gif-icon">
+          </div>
+          <div class="event-gif-icon-wrapper" style="margin: 0;">
+            <img src="./assets/gifs/CODIGO%20VESTIMENTA2.gif" alt="Vestimenta Caballeros" class="event-gif-icon">
+          </div>
+        </div>
+        <h3 class="dress-title">Código de Vestimenta</h3>
+        <div class="dress-type">Vestimenta Formal</div>
+        
+        <div class="dress-alert-coat">
+          <i class="fa-solid fa-vest-patches"></i> Se sugiere llevar abrigo
+        </div>
+        
+        <p class="dress-note">
+          El clima de San Lucas Sacatepéquez suele ser fresco al atardecer y noche.<br>
+          *Color blanco reservado para la novia.*
+        </p>
+      </div>
+    </section>
+
+    <!-- Divisor Floral -->
+    <div class="floral-divider-container">
+      <img src="./assets/images/floral_divider.png" alt="Decoración Floral" class="floral-divider-img">
+    </div>
+
+    <!-- ==========================================================
+         MESA DE REGALOS / LLUVIA DE SOBRES
+         ========================================================== -->
+    <section class="gifts-section">
+      <div class="gift-card">
+        <div class="event-gif-icon-wrapper">
+          <img src="./assets/gifs/REGALOS.gif" alt="Mesa de Regalos" class="event-gif-icon">
+        </div>
+        <h3 class="gift-title">Mesa de Regalos</h3>
+        <p class="gift-main-quote">¡El mejor regalo es su presencia!</p>
+        <p class="gift-desc">
+          Pero si quiere tener un detalle con nosotros puede realizarlo en efectivo:
+        </p>
+        
+        <div class="gift-envelope-badge">
+          <i class="fa-solid fa-envelope"></i> Lluvia de Sobres
+        </div>
+        
+        <p class="gift-thanks">¡Gracias por su cariño!</p>
+      </div>
+    </section>
+
+    <!-- Divisor Floral -->
+    <div class="floral-divider-container">
+      <img src="./assets/images/floral_divider.png" alt="Decoración Floral" class="floral-divider-img">
+    </div>
+
+    <!-- ==========================================================
+         CONFIRMACIÓN DE ASISTENCIA (RSVP)
+         ========================================================== -->
+    <section class="rsvp-section">
+      <div class="rsvp-card">
+        <div class="event-gif-icon-wrapper">
+          <img src="./assets/gifs/CONFIRMAR.gif" alt="Confirmar Asistencia" class="event-gif-icon">
+        </div>
+        <h3 class="rsvp-title">Confirmación de Asistencia</h3>
+        
+        <div class="rsvp-deadline-badge">
+          <i class="fa-regular fa-calendar-xmark"></i> Límite de confirmar: 6 de noviembre
+        </div>
+
+        <div class="rsvp-buttons-group">
+          <a href="https://wa.me/50252431560?text=%C2%A1Hola!%20Con%20mucha%20alegr%C3%ADa%20confirmo%20mi%20asistencia%20a%20la%20Boda%20de%20Eva%20y%20Juan%20Carlos.%20%F0%9F%92%8D%F0%9F%A5%82" target="_blank" rel="noopener noreferrer" class="btn-rsvp-whatsapp">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.35rem;"></i> Confirmar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor Floral -->
+    <div class="floral-divider-container">
+      <img src="./assets/images/floral_divider.png" alt="Decoración Floral" class="floral-divider-img">
+    </div>
+
+    <!-- ==========================================================
+         ORACIÓN / VERSÍCULO BÍBLICO
+         ========================================================== -->
+    <section class="verse-section">
+      <div class="verse-card">
+        <div class="event-gif-icon-wrapper" style="margin: 0 auto 15px;">
+          <img src="./assets/gifs/ORACION-TE%20ESPERAMOS.gif" alt="Oración" class="event-gif-icon">
+        </div>
+        <p class="verse-text">
+          "Más valen dos que uno, porque obtienen más fruto de su esfuerzo. Si caen, el uno levanta al otro."
+        </p>
+        <span class="verse-cite">Eclesiastés 4:9-12 NVI</span>
+      </div>
+    </section>
+
+    <!-- Divisor Floral -->
+    <div class="floral-divider-container">
+      <img src="./assets/images/floral_divider.png" alt="Decoración Floral" class="floral-divider-img">
+    </div>
+
+    <!-- ==========================================================
+         DESPEDIDA: ¡TE ESPERAMOS!
+         ========================================================== -->
+    <section class="farewell-section">
+      <div class="event-gif-icon-wrapper" style="margin: 0 auto 16px;">
+        <img src="./assets/gifs/GRACIAS.gif" alt="¡Gracias por su cariño!" class="event-gif-icon">
+      </div>
+      <h2 class="farewell-title">¡Te esperamos!</h2>
+      <div class="farewell-names">Eva &amp; Juan Carlos</div>
+    </section>
+
+    <!-- ==========================================================
+         FOOTER CON ESTILO TADI (COMO LA REFERENCIA)
+         ========================================================== -->
+    <footer class="tadi-footer">
+      <p>
+        Página creada por <strong>TADI</strong> / 
+        <a href="https://sites.google.com/view/tadi-gt/servicios/cat%C3%A1logo-invitaciones" target="_blank" rel="noopener noreferrer">Ingresar acá</a> / 
+        <a href="https://wa.me/50236733749" target="_blank" rel="noopener noreferrer">(502) 3673 3749</a>
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================================
+       MODAL INTERACTIVO DE CONFIRMACIÓN POR WHATSAPP
+       ========================================================== -->
+  <!-- Scripts -->
+  <script src="./js/script.js"></script>
+</body>
+</html>
