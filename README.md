@@ -4,7 +4,7 @@ Invitación digital de boda interactiva y mobile-first para la boda de **Eva & J
 
 ## Características
 - **Apertura de sobre interactiva** con sello de lacre personalizado y animación realista.
-- **Música de fondo:** "Contigo Siempre" de Pablo Alborán, con reproductor flotante y control de pausa/reproducción.
+- **Música de fondo:** "Llegaste Tú" de Luis Fonsi, con reproductor flotante y control de pausa/reproducción.
 - **Lluvia de pétalos de rosa** animada en canvas.
 - **Diseño exclusivo:** Paleta vino tinto, crema, marfil y acentos dorados con textura de yeso/escayola en relieve.
 - **Cuenta regresiva en vivo** para el sábado 28 de noviembre de 2026 a las 17:00 hrs.
