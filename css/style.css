@@ -4,6 +4,15 @@
    Optimizado para móviles (Mobile-First Luxury Wedding Style)
    ========================================================== */
 
+/* Fuente personalizada Dulcinea */
+@font-face {
+  font-family: 'Dulcinea';
+  src: url('../assets/fonts/Dulcinea.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Colores Principales */
   --vino-tinto: #65001E;
@@ -149,24 +158,13 @@ body {
 }
 
 .envelope-title {
-  font-family: var(--font-script);
-  font-size: 3.2rem;
+  font-family: 'Dulcinea', var(--font-script);
+  font-size: clamp(2.3rem, 7.5vw, 3.2rem);
   color: #FFFDF9;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 25px;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.envelope-title .ampersand {
-  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
-  font-style: normal !important;
-  font-weight: 400;
-  font-size: 0.78em;
-  color: #FFFDF9;
-  display: inline-block;
-  margin: 0 8px;
-  vertical-align: 2px;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-weight: normal;
 }
 
 .wax-seal-wrapper {
