@@ -11,7 +11,7 @@ Invitación digital de boda interactiva y mobile-first para la boda de **Eva & J
 - **Agregar al calendario:** Exportación de evento a archivo `.ics` y Google Calendar.
 - **Ubicaciones con GPS:** Accesos directos a Google Maps y Waze para Ceremonia (Iglesia San Lucas Evangelista) y Recepción (Casa Toribia).
 - **Código de vestimenta & Lluvia de sobres:** Información visual detallada con GIFs personalizados.
-- **Confirmación de asistencia (RSVP):** Botón directo a WhatsApp con mensaje predeterminado.
+- **Confirmación de asistencia (RSVP):** Botones directos a WhatsApp para Novia (52431560) y Novio (35654857) con mensajes personalizados.
 - **Oración y Bendición:** Cita bíblica de Eclesiastés 4:9-12.
 
 ---
